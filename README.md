@@ -2,8 +2,6 @@
 
 A classic 15-puzzle (sliding puzzle) game made with the Godot Engine (v4.x). The goal is to arrange the tiles in numerical order from 1 to 15.
 
-![gameplay_screenshot](![alt text](image.png))
-
 ---
 
 ## Features
@@ -22,5 +20,6 @@ A classic 15-puzzle (sliding puzzle) game made with the Godot Engine (v4.x). The
 5.  Press **F5** or the **Play** button to run the game.
 
 ---
+
 
 This project was created following a tutorial and demonstrates basic game logic, scene instantiation, and UI management in Godot.
