@@ -82,10 +82,15 @@ func draw_board():
 	for y in range(GRID_SIZE):
 		for x in range(GRID_SIZE):
 			var tile_number = board[y][x]
+			var new_size = 500 # This variable is defined correctly here.
+
 			# If the spot is not the empty one (0), create a tile for it.
 			if tile_number != 0:
 				var tile_instance = TileScene.instantiate()
 				tile_instance.text = str(tile_number)
+				# THIS IS THE MISSING LINE YOU NEED TO ADD
+				tile_instance.custom_minimum_size = Vector2(new_size, new_size)
+				
 				# Connect the tile's 'pressed' signal to our handler function.
 				# We use .bind() to pass the tile's number with the signal.
 				tile_instance.pressed.connect(on_tile_pressed.bind(tile_number))
@@ -95,7 +100,8 @@ func draw_board():
 				# If it's the empty spot, add a simple placeholder Control node.
 				# This ensures the grid layout doesn't collapse.
 				var empty_space = Control.new()
-				empty_space.custom_minimum_size = Vector2(100, 100) # Must be same size as tiles.
+				# The empty space is now correctly set to the 'new_size'
+				empty_space.custom_minimum_size = Vector2(new_size, new_size)
 				grid_container.add_child(empty_space)
 
 

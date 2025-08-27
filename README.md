@@ -21,5 +21,4 @@ A classic 15-puzzle (sliding puzzle) game made with the Godot Engine (v4.x). The
 
 ---
 
-
 This project was created following a tutorial and demonstrates basic game logic, scene instantiation, and UI management in Godot.
